@@ -27,7 +27,7 @@ public class QuickSortGPT {
 
                     System.out.printf("Generating %d random numbers with max value of %d\n", numbersAmount, maxValue);
                     
-                    generateRandomNumbers(unsortedNumbers, numbersAmount, numbersAmount);
+                    generateRandomNumbers(unsortedNumbers, numbersAmount, maxValue);
 
                     input.close();
 
@@ -48,8 +48,7 @@ public class QuickSortGPT {
         //How do you generate random numbers and add them to an arraylist?
         Random rand = new Random();
         for (int i = 0; i < amount; i++) {
-            int n = rand.nextInt(maxValue);
-            unsortedList.add(n);
+            unsortedList.add(rand.nextInt(maxValue));
         }
     }
 
@@ -61,12 +60,12 @@ public class QuickSortGPT {
 
     public static void sort(ArrayList<Integer> unsortedList) {
 
-        System.out.println("before");
+        System.out.println("Before");
         printArrList(unsortedList);
         
         quickSort(unsortedList, 0, unsortedList.size() - 1);
         
-        System.out.println("after");
+        System.out.println("\nAfter");
         printArrList(unsortedList);
     }
   
