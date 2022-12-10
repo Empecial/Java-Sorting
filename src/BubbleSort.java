@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-public class App {
+public class BubbleSort {
 
     private static List<Integer> unsortedList = new ArrayList<>();
     
